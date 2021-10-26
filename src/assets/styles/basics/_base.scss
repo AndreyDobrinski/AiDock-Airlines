@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+}
+
+html {
+  font-family: "montserrat", sans-serif;
+  background-color: gray;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: gray;
+  margin: 0;
+}
+
+// img {
+//     width: 100%;
+// }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+input,
+select {
+    padding: 5px;
+    padding-left: none;
+    border: unset;
+    background: unset;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+input::placeholder{
+  color: black;
+}
+
+
+li {
+  list-style: none;
+}
+
+
+//////////////////////////////////////////////////////////////////// 
+
+// @include for-narrow-layout {
+// }
+// @include for-normal-layout {
+// }

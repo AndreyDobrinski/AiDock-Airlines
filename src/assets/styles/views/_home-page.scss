@@ -1,0 +1,13 @@
+.app-home {
+  .content {
+    .inputs-holder {
+      flex-direction: column;
+    //   @include for-narrow-layout {
+    // }
+    @include for-normal-layout {
+          flex-direction: row;
+      }
+    }
+  }
+}
+
