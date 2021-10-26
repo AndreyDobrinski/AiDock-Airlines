@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import { AirlineList } from "../../cmps/AirlineList/AirlineList";
+import { InputSearchDate } from "../../cmps/InputSearchDate";
 import { InputSearchDistination } from "../../cmps/InputSearchDistination/InputSearchDistination";
+import { InputSearchFinalDistination } from "../../cmps/InputSearchFinalDistination";
 import { InputSearchMinuts } from "../../cmps/InputSearchMinuts";
 import { InputSearchOrigin } from "../../cmps/InputSearchOrigin";
 import { InputSearchPrice } from "../../cmps/InputSearchPrice";
@@ -30,6 +32,10 @@ export const Home = () => {
           <InputSearchDistination doLoadAirlines={doLoadAirlines} />
           <InputSearchMinuts doLoadAirlines={doLoadAirlines} />
           <InputSearchPrice doLoadAirlines={doLoadAirlines} />
+          <InputSearchDate doLoadAirlines={doLoadAirlines} />
+        </div>
+        <div>
+          <InputSearchFinalDistination doLoadAirlines={doLoadAirlines} />
         </div>
         <h1 className="text-center m-10">Planes List</h1>
         <AirlineList airlines={airlines} />

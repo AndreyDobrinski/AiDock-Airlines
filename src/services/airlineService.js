@@ -16,6 +16,7 @@ async function query(filterBy) {
     return airlines;
   } else {
     const airlinesForDisplay = airlines.filter((airline) => {
+      console.log('FilterBy' , filterBy);
 
       if (filterBy.origin || filterBy.origin === "") {
 
@@ -31,8 +32,13 @@ async function query(filterBy) {
 
         const regex = new RegExp(filterBy.origin, "i");
         return regex.test(airline.origin) &&  airline.flightLength <= filterBy.flightLength
+        
+      } else if(filterBy.date || filterBy.date === ""){
 
-      } else {
+        const regex = new RegExp(filterBy.date, "i");
+        return regex.test(airline.date) 
+
+      }else {
 
         const regex = new RegExp(filterBy.origin, "i");
         return regex.test(airline.origin) && airline.price <= filterBy.price 
@@ -52,6 +58,7 @@ function _airlinesQuery() {
       destination: "Tokyo",
       flightLength: 255,
       price: 80,
+      date:"2021-10-19"
     },
     {
       _id: "102",
@@ -59,6 +66,7 @@ function _airlinesQuery() {
       destination: "Moskva",
       flightLength: 144,
       price: 255,
+      date:"2021-10-09"
     },
     {
       _id: "103",
@@ -66,6 +74,7 @@ function _airlinesQuery() {
       destination: "New York",
       flightLength: 744,
       price: 213,
+      date:"2021-10-29"
     },
     {
       _id: "104",
@@ -73,6 +82,7 @@ function _airlinesQuery() {
       destination: "Eilat",
       flightLength: 287,
       price: 751,
+      date:"2021-10-29"
     },
     {
       _id: "105",
@@ -80,6 +90,7 @@ function _airlinesQuery() {
       destination: "Berlin",
       flightLength: 87,
       price: 21,
+      date:"2021-10-11"
     },
     {
       _id: "106",
@@ -87,6 +98,7 @@ function _airlinesQuery() {
       destination: "Dubai",
       flightLength: 355,
       price: 98,
+      date:"2021-10-12"
     },
   ];
 }

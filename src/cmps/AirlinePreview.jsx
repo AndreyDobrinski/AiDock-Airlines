@@ -16,6 +16,7 @@ export const AirlinePreview = ({ airline }) => {
       <div className="other-details flex">
         <p>Flight length: {airline.flightLength} minuts</p>
         <p>Price: {airline.price}$</p>
+        <p>Departure: {airline.date}</p>
       </div>
     </div>
   );

@@ -2,12 +2,12 @@ import { useState } from "react";
 
 export const InputSearchDistination = ({doLoadAirlines}) => {
 
-    const [inputOriginValue, setInputOriginValue] = useState('')
+    const [inputValue, setInputValue] = useState('')
 
     const [filterBy] = useState('')
 
     const handleInput = ({ target }) => {
-        setInputOriginValue(target.value)
+        setInputValue(target.value)
         const filter = { ...filterBy, "destination": target.value }
         doLoadAirlines(filter)
 
@@ -18,7 +18,7 @@ export const InputSearchDistination = ({doLoadAirlines}) => {
       <div className="input-holder flex auto-center">
         <input
           name="destination"
-          value={inputOriginValue}
+          value={inputValue}
           onChange={handleInput}
           placeholder="Search by destination"
         />
